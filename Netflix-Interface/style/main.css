@@ -1,111 +1,109 @@
-/*Definimos as cores bases
-OBS: As imagens são do site TMDB*/
-:root{
-    --vermelho: #E50914;
-    --preto: #141414;
+/* Variáveis */
+:root {
+    --color-red: #E50914;
+    --color-black: #141414;
+    --color-light-gray: #AAA;
+    --color-white: #FFFFFF;
 }
 
-/*Resetamos as confirgurações da página primeiro.*/
-*{
+/* Reset */
+* {
     margin: 0;
     padding: 0;
-    /*Determinamos que os elementos dentro de uma caixa não ultrapassem a sua borda*/
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
-/*elementos base*/
-
-body{
-    background: var(--preto);
+/* Estilos básicos */
+body {
+    background: var(--color-black);
     font-family: 'Arial', Times, serif;
-    color: white;
+    color: var(--color-white);
 }
 
-header .container{
+/* Header */
+header .container {
     display: flex;
-    flex-direction: row;    
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
 }
 
-header .logo{
-    color: var(--vermelho);
-    font-family:'Arial Black',Times, serif;
+header .logo {
+    color: var(--color-red);
+    font-family: 'Arial Black', Times, serif;
     font-size: 40px;
 }
 
-header nav a{
+header nav a {
     text-decoration: none;
-    color:#AAA;
+    color: var(--color-light-gray);
     margin-right: 10px;
 }
 
-header nav a:hover{
-    color:#fff;
+header nav a:hover {
+    color: var(--color-white);
 }
 
-/*filme principal*/
-
-.filme-principal{
+/* Filme principal */
+.filme-principal {
     font-size: 16px;
-    background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%),url('/img/LaBelle.jpg');
-    
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 100%), url('../img/LaBelle.jpg');
     height: 500px;
     background-size: cover;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
 }
 
-.filme-principal .descricao{
-    margin-top: 10px;
-    margin-bottom: 50px;
-}
-
-.filme-principal .titulo{
+.filme-principal .titulo {
     margin-top: 30%;
     font-size: 40px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.filme-principal .botao{
-    background-color: rgba(0,0,0,.50);
-    border:none;
-    color: white;
+.filme-principal .descricao {
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
 
+/* Botões */
+.filme-principal .botao {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: var(--color-white);
     padding: 15px 30px;
     margin-right: 15px;
-    font-size:12px;
-
+    font-size: 12px;
     cursor: pointer;
-    transition: .3s ease all;
+    transition: 0.3s ease all;
 }
 
-.botao:hover{
-    background-color: white;
-    color: black;
+.filme-principal .botao:hover {
+    background-color: var(--color-white);
+    color: var(--color-black);
 }
 
-.botao i{
-    margin-right: 5px;  
+.filme-principal .botao i {
+    margin-right: 5px;
 }
 
-.filme-principal .container{
+/* Containers */
+.filme-principal .container {
     width: 70%;
 }
 
-.container{
+.container {
     margin-left: 20px;
 }
 
-.box-filme{
-    height:100%;
-    width:100%;
-    display:block;
+/* Carrossel de filmes */
+.carrossel-filmes {
+    margin-top: 5px;
 }
 
-.carrossel-filmes{
-    margin-top: 5px;
+.box-filme {
+    height: 100%;
+    width: 100%;
+    display: block;
 }
